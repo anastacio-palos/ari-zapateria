@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> {{ zapateria.marca }} </mat-card-title>
+        <mat-card-subtitle> {{ zapateria.modelo}} </mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image src="assets/fotos-calzado/{{zapateria.id}}.jpg">
+
+    <mat-card-content>
+        <h3>{{ zapateria.descripcion}}</h3>
+        <p>
+            <strong>Color</strong> {{ zapateria.color}}
+            <br>
+            <strong> Precio </strong> {{ zapateria.precio}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button 
+                color="warn"
+                [routerLink]="['/ari', zapateria.id ]">
+            Leer más...
+        </button>
+
+        <button mat-button 
+                color="info"
+                [routerLink]="['/ari/editar', zapateria.id ]">
+            Editar
+        </button>
+    </mat-card-actions>
+
+</mat-card>

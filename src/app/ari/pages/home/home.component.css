@@ -1,0 +1,22 @@
+.container {
+    margin: 10px;
+  }
+#menu{
+    with:100%;
+    margin-botton: 20px;
+  }
+ #menu ul{
+    line-height:46px;
+    list-style: none;
+  }
+#menu ul li{
+    height: 46px;
+    display: inline-block;
+  }
+#menu a{
+    display: block;
+    color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+}

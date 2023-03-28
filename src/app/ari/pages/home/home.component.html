@@ -1,0 +1,57 @@
+<mat-sidenav-container fullsreem>
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar>
+            <samp>Menú</samp>
+            <button mat-icon-button
+            (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+        </button>
+        </mat-toolbar>
+        <mat-nav-list>
+            <a routerLink="./listado"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>label</mat-icon>
+                <span>Listado de Zapatos</span>
+            </a>
+
+            <a routerLink="./agregar"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Añadir Calzado</span>
+            </a>
+
+            <a routerLink="./buscar"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                <span>Búscar Calzado</span>
+            </a>
+            
+        </mat-nav-list>
+        
+    </mat-sidenav>
+        <mat-toolbar>
+           
+            <button mat-icon-button
+            (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+        </button>
+        <nav id ="menu">
+            <ul>
+                <li><a href="#">DAMA</a></li>
+                <li><a href="#">CABALLERO</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#">CATALOGO</a></li>
+            </ul>
+        </nav>
+        <span class="spacer"></span>
+
+    <button mat-button>
+        Logout
+    </button>
+        </mat-toolbar>
+    
+    <router-outlet></router-outlet>
+</mat-sidenav-container>

@@ -1,0 +1,43 @@
+<mat-grid-list cols="1" *ngIf="!zapatos; else divZapatos">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #divZapatos>
+    
+    <div fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutGap="30px">
+
+         <div fxFlex="50">
+             <h1>{{ zapatos.descripcion }}</h1>
+             <mat-divider></mat-divider>
+             <br>
+             <img mat-card-image src="assets/fotos-calzado/{{zapatos.id}}.jpg">
+         </div>
+
+         <div fxFlex="50">
+             <h1>{{ zapatos.descripcion }}</h1>
+             <mat-divider></mat-divider>
+
+             <mat-list>
+                 <mat-list-item> {{ zapatos.marca }} </mat-list-item>
+                 <mat-list-item> {{ zapatos.modelo }} </mat-list-item>
+                 <mat-list-item> {{ zapatos.color }} </mat-list-item>
+                 <mat-list-item> {{ zapatos.precio }} </mat-list-item>
+             </mat-list>
+
+             <br>
+             <button mat-button
+                     color="warn"
+                     (click)="regresar()">
+                 Regresar
+             </button>
+         </div>
+
+    </div>
+
+
+</ng-template>
